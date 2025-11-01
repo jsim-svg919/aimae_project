@@ -1,0 +1,146 @@
+/* Footer 스타일링 */
+.footer {
+    background-color: white;
+    color: black;
+    padding: 50px 20px;
+    font-family: 'Pretendard-Regular', sans-serif;
+    position: relative;
+    bottom: 0;
+    border-top: 0.1px solid #e1dcdc;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;  /* 항목들을 가로로 고르게 배치 */
+    gap: 20px;  /* 항목들 간의 간격 */
+    width: 100%;
+    max-width: 640px;  /* 최대 너비 설정 */
+    margin: 0 auto;  /* 자동 여백을 이용해 가운데 정렬 */
+    flex-wrap: wrap;  /* 화면이 좁아지면 자동으로 줄 바꿈 */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;  /* 최소 너비 설정 */
+    display: flex;
+    flex-direction: column;
+    text-align: center;  /* 텍스트를 가운데 정렬 */
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 0.9rem;
+    color: black;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #8c52ff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    color: black;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-tag {
+    margin-bottom: 8px;
+}
+
+/* 소셜 미디어 아이콘 스타일 */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: black;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #8c52ff;
+}
+
+.footer-p {
+    margin: 4px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;  /* 모바일에서 세로로 쌓이게 설정 */
+        align-items: center;
+        gap: 20px;  /* 항목들 간의 간격 */
+    }
+
+    .footer-section {
+        width: 100%;  /* 세로로 나열 시 각 섹션을 100% 넓이로 */
+        margin-bottom: 20px;  /* 섹션 사이 간격 */
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+        margin-top: 20px;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;  /* 모바일에서 아이콘 크기 줄이기 */
+    }
+
+    .footer-section h4 {
+        font-size: 1.1rem;  /* 모바일에서 섹션 제목 크기 줄이기 */
+    }
+
+    .footer-section p, .footer-section ul {
+        font-size: 0.8rem;  /* 모바일에서 텍스트 크기 줄이기 */
+    }
+}
+
+/* 추가: 매우 작은 화면에서 더 간격을 줄여줄 수 있습니다 */
+@media (max-width: 480px) {
+    .footer-content {
+        gap: 10px;  /* 더 좁은 화면에서는 간격을 줄여줍니다 */
+    }
+
+    .footer-section h4 {
+        font-size: 1rem;  /* 더 작은 화면에서 제목 크기 줄이기 */
+    }
+
+    .footer-section p, .footer-section ul {
+        font-size: 0.75rem;  /* 더 작은 화면에서 텍스트 크기 줄이기 */
+    }
+
+    .footer-bottom {
+        font-size: 0.7rem;  /* 더 작은 화면에서 푸터 텍스트 크기 줄이기 */
+    }
+
+    .social-icons a {
+        font-size: 1rem;  /* 더 작은 화면에서 아이콘 크기 줄이기 */
+    }
+}

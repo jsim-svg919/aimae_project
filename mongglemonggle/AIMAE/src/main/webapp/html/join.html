@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMAE</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.ico" sizes="52x52" type="image/png">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+</head>
+
+<body>
+
+    </div>
+
+    <!-- join -->
+    <div class="login-box" style="margin-top: 6rem; margin-bottom: 10rem;">
+
+        <div class="login-container">
+            
+            <div class="login-header">
+                <h1 class="login-logo"><a href="../index.html" class="logo">AIMAE</a></h1>
+                <h1 class="login-logo" style="margin-top: 1.45rem !important; font-size: 20px !important;">회원가입</h1>
+            </div>
+
+                <div class="login-form">
+                    <form action="/AIMAE/JoinService" method="post">
+                        <label for="userId">아이디</label>
+                        <div class="form-input-join">
+                            <input id="userId" type="text" name="UserId" value="" placeholder="아이디를 입력해주세요." style="width: 17.17rem;">
+                            <button type="button" onclick="">중복 확인</button>
+                        </div>
+
+                        <label for="userPw">비밀번호</label> <a style="color: #8c52ff; margin-left: 1rem;">12자리 까지 입력가능합니다.</a>
+                        <div class="form-input-join">
+                            <input id="userPw" type="password" name="UserPw" value="" placeholder="비밀번호를 입력해주세요." style="width: 23.3rem;" maxlength="12">
+                        </div>
+
+                        <label for="userPw2">비밀번호 재확인</label> <a style="margin-left: 1rem;" id="checkPw"></a>
+                        <div class="form-input-join">
+                            <input id="userPw2" type="password" name="" value="" placeholder="한번더 입력 해주세요." style="width: 23.3rem;" maxlength="12">
+                        </div>
+
+                        <label for="email">이메일</label>
+                        <div class="form-input-join" style="display: flex;">
+                            <input id="email" type="text" name="Email" value="" placeholder="이메일을 입력해주세요.">
+                            <button type="button" onclick="">인증번호 전송</button>
+                        </div>
+                        
+                        <div class="form-input-join">
+                            <input type="text" name="auth_code" placeholder="인증번호를 입력해주세요.">
+                            <button type="button" onclick="">인증번호 확인</button>
+                        </div>
+
+                        <label for="username">이름</label>
+                        <div class="form-input-join">
+                            <input id="username" type="text" name="UserName" value="" placeholder="이름을 입력해주세요." style="width: 23.3rem;">
+                        </div>
+
+                        <label for="tell">전화번호</label>
+                        <div class="form-input-join" style="align-items: center;">
+                            <input id="tel1" type="text" name="tel1" value="" maxlength="3"> <a>-</a>
+                            <input id="tel2" type="text" name="tel2" value="" maxlength="4"> <a>-</a>
+                            <input id="tel3" type="text" name="tel3" value="" maxlength="4">
+                        </div>
+                        
+                        <label for="address">주소</label>
+                        <div class="form-input-join">
+                            <input id="address" type="text" name="UserAddress" value="" placeholder="주소를 입력해주세요." style="width: 23.3rem;">
+                        </div>
+
+                        <label for="birthday">생년월일</label>
+                        <div class="form-input-join">
+                            <input id="birthday" type="date" name="Birthday" value="" style="width: 23.3rem;">
+                        </div>
+
+                        <div class="join-button">
+                            <button type="submit" onclick="">회원가입</button>
+                            <button type="reset" onclick="" class="join-btn-c">취소</button>
+                        </div>
+
+                    </form>
+                </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <h4 style="margin-bottom: 22px;">회사 정보</h4>
+                <p class="footer-p">주소 : 서울특별시 강남구</p>
+                <p class="footer-p">전화 : 010-1234-5678</p>
+                <p class="footer-p">이메일 : support@aimae.com</p>
+            </div>
+        
+            <div class="footer-section">
+
+                <h4>고객센터</h4>
+                <ul>
+                    <li class="footer-tag"><a href="#">FAQ</a></li>
+                    <li class="footer-tag"><a href="#">반품/교환</a></li>
+                    <li class="footer-tag"><a href="#">배송정보</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-section">
+
+                <h4>소셜 미디어</h4>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/chan2hee1" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 AIMAE</p>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="../js/index.js"></script>
+
+    <!-- 패스워드 확인 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const pw1 = document.getElementById('userPw');
+            const pw2 = document.getElementById('userPw2');
+            const msg = document.getElementById('checkPw');
+            const resetBtn = document.querySelector('.join-btn-c');
+
+            function checkPasswordMatch() {
+                if (pw1.value === '' || pw2.value === '') {
+                    msg.textContent = '';
+                    return;
+                }
+
+                if (pw1.value === pw2.value) {
+                    msg.textContent = '비밀번호가 일치합니다';
+                    msg.style.color = 'red';
+                } else {
+                    msg.textContent = '비밀번호가 일치하지 않습니다';
+                    msg.style.color = 'red';
+                }
+            }
+
+            pw1.addEventListener('input', checkPasswordMatch);
+            pw2.addEventListener('input', checkPasswordMatch);
+
+            // 취소 버튼 누르면 메시지 초기화
+            resetBtn.addEventListener('click', () => {
+                msg.textContent = '';
+            });
+        });
+</script>
+
+</body>
+</html>

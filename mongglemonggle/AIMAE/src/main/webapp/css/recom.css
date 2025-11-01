@@ -1,0 +1,138 @@
+/* 추천 결과 표 스타일 */
+.recommend-table-wrap {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+    overflow-x: auto; /* 모바일에서 가로 스크롤 가능 */
+}
+
+.recommend-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Pretendard-Regular', sans-serif;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* 헤더 스타일 */
+.recommend-table thead {
+    background: linear-gradient(135deg, #8c52ff, #6a30d9);
+    color: #fff;
+}
+
+.recommend-table th {
+    padding: 14px;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* 본문 스타일 */
+.recommend-table td {
+    padding: 12px;
+    font-size: 0.95rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+/* 행 hover 효과 */
+.recommend-table tbody tr:hover {
+    background-color: #f9f6ff;
+    transition: 0.2s;
+}
+
+/* 마지막 행 border 제거 */
+.recommend-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.recommend-header {
+    margin-right: 6.2rem;
+    margin-top: 2rem;
+    margin-left: 6.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem 2rem;
+    background: #f9f9f9; /* 연한 배경색 */
+    border-left: 6px solid #8c52ff; /* 포인트 컬러 경계선 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.recommend-header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.recommend-header h2 {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.content-product-header {
+    margin-left: 0rem;
+}
+
+.product-list-box {
+	width: 12rem;
+	height: 22.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+    margin: 0 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-list-box:hover {
+    transform: translateY(-5px);
+}
+
+.product-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 10px 15px;
+}
+
+.product-name {
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.2;
+  height: 2.4em; /* 2줄 고정 높이 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+
+.product-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.add-cart-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #8c52ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.add-cart-btn i {
+    margin-right: 5px;
+}

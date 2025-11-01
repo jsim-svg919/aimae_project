@@ -1,0 +1,715 @@
+body {
+    font-family: 'Pretendard-Regular', sans-serif;
+}
+
+.logo2 {
+    text-decoration: none;
+    color: #8c52ff;
+    text-shadow: 0 0 10px rgba(124, 58, 237, 0.3), 0 0 20px rgba(124, 58, 237, 0.2);
+}
+
+.content {
+    display: flex;
+    min-height: calc(100vh - 190px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(45deg, #ffffff, #ffffff, #fdf0ff, #fae3ff, #ffffff, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+/* 그라디언트 색깔을 변화시키는 애니메이션 */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;  /* 10px -> rem으로 변경 */
+    margin-bottom: 2.5rem;
+    color: #555;
+}
+
+.content-product {
+    height: 500px;
+}
+
+.cotent-header {
+    margin-left: 40px;
+}
+
+.content-product-list {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.product-list-box {
+    width: 246px;
+    height: 284px;
+    background-color: #e6e6e6;
+    gap: 50px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0;  /* form 기본 여백 제거 */
+    padding: 0; /* form 기본 패딩 제거 */
+}
+
+.search-btn {
+    margin-top: 3.125rem;  /* 50px -> rem으로 변경 */
+    width: 50rem;  /* 800px -> rem으로 변경 */
+    padding: 0.625rem 0.9375rem;  /* 10px 15px -> rem으로 변경 */
+    background-color: #e6e6e6;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 0.3125rem;  /* 5px -> rem으로 변경 */
+    font-size: 1rem;  /* 16px -> rem으로 변경 */
+    cursor: pointer;
+}
+
+/* 기본 레이아웃 설정 */
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 5px 15px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.search input::placeholder {
+    color: #886666;
+}
+
+.search input:focus {
+    border: 2px solid #007bff;
+}
+
+/* 검색 아이콘을 왼쪽에 배치 */
+.search a.search-icon {
+    padding: 10px;
+    margin-right: 10px; /* 오른쪽 여백 */
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+/* 이미지 아이콘을 오른쪽에 배치 */
+.search a.image-icon {
+    padding: 10px;
+    margin-left: 15px;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+.search a:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+/* 아이콘을 원형 배경에 넣기 */
+.search a i {
+    font-size: 18px;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.search a:hover i {
+    background-color: #007bff;
+    color: white;
+}
+
+.animated-text {
+    font-size: 30px;
+    font-family: 'Pretendard-Regular', sans-serif;
+    white-space: nowrap;  /* 텍스트가 한 줄로 나타나도록 */
+    overflow: hidden;  /* 글자가 넘치지 않도록 */
+    border-right: 3px solid black; /* 타이핑 커서처럼 보이게 */
+    width: 0;
+    animation: typing 2.5s steps(40) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    to {
+        width: 100%; /* 텍스트가 모두 보여지도록 width 조정 */
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent; /* 커서 깜빡임 효과 */
+    }
+}
+
+.content-product-header {
+    margin-left: 16rem;
+    margin-top: 3rem;
+}
+
+.content-header {
+  margin-left: 40px;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+.content-product-list-wrapper {
+  overflow: hidden;
+  width: 800px; /* 3개 카드 너비 + gap 포함 */
+}
+
+.content-product-list {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.slider-btn {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.slider-btn:hover {
+  background-color: #333;
+}
+
+#product-list {
+    justify-content: center;
+    display: flex;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* 기본 은은한 그림자 */
+    transition: box-shadow 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+#product-list:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 마우스 올렸을 때 진한 그림자 */
+}
+
+.product-list-box {
+  width: 246px;
+  height: 284px;
+  background-color: #f1f1f1;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#product-slider2 {
+    display: flex;
+}
+
+/* 슬라이더 전체 영역 가운데 정렬 */
+.product-slider {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* slick 기본 화살표 커스터마이징 */
+.slick-prev,
+.slick-next {
+    background-color: transparent;
+    border: none;
+    font-size: 32px;
+    color: #333;
+    z-index: 10;
+}
+
+/* 화살표 위치 조정 */
+.slick-prev {
+    display: flex;
+    width: 70px;
+    left: -40px;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* 기본 은은한 그림자 */
+    transition: box-shadow 0.3s ease; /* 부드러운 전환 효과 */
+    height: 50px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 8rem;
+}
+
+.slick-prev:hover {
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 마우스 올렸을 때 진한 그림자 */
+}
+
+.slick-next {
+    display: flex;
+    width: 70px;
+    right: -40px;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* 기본 은은한 그림자 */
+    transition: box-shadow 0.3s ease; /* 부드러운 전환 효과 */
+    height: 50px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 8rem;
+}
+
+.slick-next:hover {
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 마우스 올렸을 때 진한 그림자 */
+}
+
+.slick-prev::before {
+    font-size: 30px;
+    color: #333;
+}
+.slick-next::before {
+    font-size: 30px;
+    color: #333;
+}
+
+.list-pbox {
+    text-decoration: none;
+    color: black;
+}
+
+.content-box-img {
+  display: flex;
+  justify-content: center; /* 이미지들 가운데 정렬 */
+  gap: 2rem;                /* 이미지 사이 간격 */
+  /* flex-wrap: wrap; */          /* 화면 작아질 때 줄바꿈 */
+  max-width: 85rem;        /* 전체 폭 제한 */
+  margin: 3rem auto;        /* 상하 여백 + 중앙 정렬 */
+  padding: 0 1rem;          /* 좌우 여백 */
+}
+
+.content-img {
+    width: 36%;
+    height: auto;
+    max-width: 100%;
+    margin-left: 5px;
+    margin-bottom: 2rem;
+}
+
+
+/* 드롭다운 컨테이너 */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* 드롭다운 메뉴 숨기기 */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: 4px;
+  padding: 8px 0;
+}
+
+/* 드롭다운 메뉴 항목 스타일 */
+.dropdown-content a {
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+/* 마우스 오버 시 배경색 */
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+/* 드롭다운 열림 표시 (active 클래스) */
+.dropdown.show .dropdown-content {
+  display: block;
+}
+
+/* 마우스 오버 시 드롭다운 메뉴 보이기 */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* 화면 너비가 1920px 이상일 때 */
+@media (min-width: 1920px) {
+    .animated-text {
+        font-size: 55px !important;
+    }
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.product-price {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 12px;
+}
+
+.add-cart-btn {
+  background: #8c52ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-cart-btn:hover {
+  background: #6a35cc;
+}
+
+/* slick 화살표 커스터마이징 */
+.slick-prev, .slick-next {
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  background: #8c52ff;
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.slick-prev::before, .slick-next::before {
+  font-size: 20px;
+  color: #333;
+}
+
+.slick-prev {
+  left: -20px;
+}
+
+.slick-next {
+  right: -20px;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .product-card {
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    min-width: 150px;
+  }
+}
+
+.product-slider {
+  width: 85%; /* 90% → 85%로 줄이기 */
+  margin: 3rem auto;
+  position: relative;
+  padding: 0 20px; /* 양옆 여백 */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start; /* 카드 좌측 정렬 */
+  gap: 24px; /* 카드 간격, margin 대신 gap 추천 */
+  flex-wrap: nowrap; /* 필요하면 wrap 으로 변경 가능 */
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 0 12px; /* 카드 간격 조절 */
+  padding: 10px;
+  width: 18rem; /* 너비 줄임 */
+  flex-shrink: 0; /* 슬라이더에서 줄어들지 않게 */
+  cursor: pointer; /* 클릭 가능 느낌 */
+}
+
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  background-color: #f9f9f9; /* 남는 공간 보완용 */
+  border-radius: 12px;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.add-cart-btn {
+  background: #8c52ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-cart-btn:hover {
+  background: #6a35cc;
+}
+
+/* slick 화살표 커스터마이징 */
+.slick-prev, .slick-next {
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 17%; /* product-card 높이 중간에 위치 */
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  background: #8c52ff;
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slick-prev::before, .slick-next::before {
+  font-size: 18px;
+  color: #333;
+}
+
+.slick-prev {
+  left: -20px;
+}
+
+.slick-next {
+  right: -20px;
+}
+
+/* 타이틀 */
+.content-product-header {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-left: 5%;
+  margin-bottom: 1rem;
+  color: #333;
+  position: relative;
+}
+
+/* 반응형 카드 */
+@media (max-width: 1024px) {
+  .product-card {
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    min-width: 150px;
+  }
+
+  .slick-prev, .slick-next {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .content-product-header {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: 160px;
+    margin: 0 8px;
+  }
+
+  .product-img {
+    height: 120px;
+  }
+}
+
+.section-header {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #333;
+  margin: 3rem 2rem 2rem 8%;
+  position: relative;
+  padding-bottom: 0.6rem;
+}
+
+.section-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  max-width: 134rem; /* 원하는 최대 길이 지정 */
+  background: linear-gradient(90deg, #8c52ff, #ff84c2);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* 반응형 대응 */
+@media (max-width: 768px) {
+  .section-header {
+    font-size: 1.6rem;
+    margin-left: 5%;
+  }
+
+  .section-header::after {
+    width: 40px;
+  }
+}
+
+.section-header {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 미리보기 css */
+.preview-area {
+	margin-bottom: 2rem;
+	  margin-top: 12px;
+	  display: flex;
+	  align-items: center;
+	  gap: 10px;
+}
+
+.preview-wrapper {
+	  position: relative;
+	  display: inline-block;
+}
+
+.preview-img {
+	  max-width: 140px;
+	  border: 2px solid #e0e0e0;
+	  border-radius: 10px;
+	  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	  display: none; /* 기본 숨김 */
+}
+
+.preview-clear {
+	  position: absolute;
+	  top: -8px;
+	  right: -8px;
+	  background: #ff5c5c;
+	  border: none;
+	  border-radius: 50%;
+	  width: 22px;
+	  height: 22px;
+	  color: #fff;
+	  font-size: 14px;
+	  font-weight: bold;
+	  cursor: pointer;
+	  display: none; /* 기본 숨김 */
+	  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	  transition: background 0.2s;
+	  line-height: 20px;
+	  text-align: center;
+}
+
+.preview-clear:hover {
+  	background: #ff3030;
+}
+
+.image-status {
+	  font-size: 0.9em;
+	  color: #555;
+}
+

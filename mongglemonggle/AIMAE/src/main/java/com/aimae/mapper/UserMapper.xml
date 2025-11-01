@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aimae.util.UserMapper">
+
+	<insert id="join" parameterType="com.aimae.model.UserInfo">
+		INSERT INTO USERS(USER_NUM,EMAIL,USER_ID,PASSWORD,USER_NAME,PHONE,JOIN_DATE,USER_ADRRESS) VALUES('us_00' || USERS_SEQ.nextval, #{EMAIL}, #{USER_ID}, #{PASSWORD}, #{USER_NAME}, #{PHONE, jdbcType=VARCHAR}, #{JOIN_DATE, jdbcType=VARCHAR}, #{USER_ADRRESS, jdbcType=VARCHAR})
+	</insert>
+	
+	<select id="checkUserId"  parameterType="com.aimae.model.UserInfo" resultType="com.aimae.model.UserInfo"> 
+		SELECT * FROM USERS WHERE USER_ID = #{userId}
+	</select>
+	
+	<select id="checkUserGrade"  parameterType="com.aimae.model.UserInfo" resultType="string"> 
+		SELECT GRADE FROM USERS WHERE USER_ID = #{USER_ID}
+	</select>
+	
+	<!-- <select id="login" resultType="com.aimae.model.UserInfo" parameterType="com.aimae.model.UserInfo">
+		SELECT * FROM USERS WHERE USER_ID = #{USER_ID} AND PASSWORD = #{PASSWORD}
+	</select>
+	 -->
+	<select id="login" resultType="com.aimae.model.UserInfo" parameterType="string">
+    	SELECT * FROM USERS WHERE USER_ID = #{userId}
+	</select>
+	
+	<update id="update" parameterType="com.aimae.model.UserInfo">
+	    UPDATE USERS
+	    <set>
+	        <if test="USER_NAME != null and USER_NAME != ''">
+	            USER_NAME=#{USER_NAME},
+	        </if>
+	        <if test="EMAIL != null and EMAIL != ''">
+	            EMAIL=#{EMAIL},
+	        </if>
+	        <if test="PASSWORD != null and PASSWORD != ''">
+	            PASSWORD=#{PASSWORD},
+	        </if>
+	        <if test="PHONE != null and PHONE != ''">
+	            PHONE=#{PHONE},
+	        </if>
+	        <if test="USER_ADRRESS != null and USER_ADRRESS != ''">
+	            USER_ADRRESS=#{USER_ADRRESS}
+	        </if>
+	    </set>
+	    	where USER_ID = #{USER_ID}
+	</update>
+	
+	<select id="select" resultType="com.aimae.model.UserInfo" parameterType="com.aimae.model.UserInfo">
+		SELECT * FROM USERS
+	</select>
+	
+	<delete id="unregister" parameterType="com.aimae.model.UserInfo">
+		delete FROM USERS WHERE USER_ID = #{USER_ID}
+	</delete>
+	
+	<select id="findId" resultType="String" parameterType="String">
+		SELECT USER_ID FROM USERS WHERE EMAIL = #{email} AND USER_ID NOT LIKE 'NAVER_%' AND USER_ID NOT LIKE 'KAKAO_%'
+	</select>
+	
+	<select id="findPw" resultType="com.aimae.model.UserInfo" parameterType="com.aimae.model.UserInfo">
+		SELECT USER_ID, PASSWORD FROM USERS WHERE USER_ID = #{userId} AND EMAIL=#{email}
+	</select>
+	
+	<update id="updatePassword" parameterType="com.aimae.model.UserInfo">
+    	UPDATE USERS SET PASSWORD = #{PASSWORD, jdbcType=VARCHAR} WHERE USER_ID = #{USER_ID, jdbcType=VARCHAR}
+	</update>
+	
+	<select id="findEmail"  parameterType="com.aimae.model.UserInfo" resultType="int"> 
+      	SELECT COUNT(*) FROM USERS WHERE EMAIL = #{EMAIL}
+   	</select>
+
+</mapper>

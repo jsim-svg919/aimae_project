@@ -1,0 +1,214 @@
+/* 전체 폰트와 기본 배경 */
+body {
+    font-family: 'Pretendard-Regular', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 장바구니 컨테이너 */
+.cart-container {
+    margin-bottom: 11.5rem !important;
+    margin-top: 10rem !important;
+    max-width: 960px;
+    margin: 3rem auto 5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px rgba(140, 82, 255, 0.15);
+    padding: 2.5rem 3rem;
+}
+
+/* 헤더 영역 */
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+}
+
+.cart-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #8c52ff;
+    margin: 0;
+}
+
+.cart-header #cart-count {
+    font-weight: 500;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* 테이블 스타일 */
+table.cart-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    font-size: 1rem;
+    table-layout: fixed;
+}
+
+/* 헤더 */
+table.cart-table thead tr th {
+    text-align: center;
+    color: #6e6e6e;
+    font-weight: 600;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #eee;
+    vertical-align: middle;
+}
+
+/* 상품 이미지 */
+table.cart-table tbody tr td:first-child {
+    width: 100px;
+    padding: 10px 0;
+}
+
+table.cart-table tbody tr td:first-child img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(140, 82, 255, 0.2);
+}
+
+/* 테이블 바디 셀 스타일 */
+table.cart-table tbody tr td {
+    background: #fafafa;
+    padding: 15px 10px;
+    border-radius: 10px;
+    vertical-align: middle;
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
+    overflow-wrap: break-word;
+}
+
+table.cart-table tbody tr td:nth-child(2) {
+    text-align: left;
+    font-weight: 600;
+    color: #444;
+}
+
+table.cart-table tbody tr td:nth-child(3),
+table.cart-table tbody tr td:nth-child(5) {
+    color: black;
+    font-weight: 700;
+}
+
+/* 수량 input 스타일 */
+.qty-input {
+    width: 60px;
+    padding: 7px 10px;
+    border: 1.5px solid #8c52ff;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.qty-input:focus {
+    outline: none;
+    border-color: #592edb;
+    box-shadow: 0 0 5px #8c52ff66;
+}
+
+/* 삭제 버튼 */
+.remove-btn {
+    background-color: #ff6b81;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 3px 6px rgba(255, 107, 129, 0.3);
+}
+
+.remove-btn:hover {
+    background-color: #e05267;
+    box-shadow: 0 5px 10px rgba(224, 82, 103, 0.5);
+}
+
+/* 합계 & 결제 영역 */
+.cart-summary {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.total-price {
+    font-size: 1.6rem;
+    font-weight: 800;
+    flex-grow: 1;
+}
+
+.checkout-btn {
+    background-color: #8c52ff;
+    color: #fff;
+    font-weight: 700;
+    padding: 14px 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    /* box-shadow: 0 8px 20px rgba(140, 82, 255, 0.5); */
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.checkout-btn:hover {
+    background-color: #592edb;
+    box-shadow: 0 10px 30px rgba(89, 46, 219, 0.7);
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    .cart-container {
+        margin: 2rem 1rem 4rem;
+        padding: 1.5rem 1.5rem;
+    }
+
+    table.cart-table thead tr th,
+    table.cart-table tbody tr td {
+        font-size: 0.9rem;
+        padding: 10px 6px;
+    }
+
+    table.cart-table tbody tr td:first-child {
+        width: 70px;
+    }
+
+    table.cart-table tbody tr td:first-child img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .qty-input {
+        width: 50px;
+        padding: 5px 8px;
+    }
+
+    .cart-summary {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .total-price {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .checkout-btn {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 1.1rem;
+    }
+}

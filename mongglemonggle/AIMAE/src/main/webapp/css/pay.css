@@ -1,0 +1,47 @@
+body {
+    font-family: 'Pretendard-Regular', sans-serif;
+}
+
+.pay-section {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    text-align: center;
+}
+
+.pay-container {
+    width: 60rem;
+    padding: 40px 30px;
+    border-radius: 12px;
+}
+
+.pay-icon {
+    font-size: 60px;
+    color: #8c52ff;
+    margin-bottom: 20px;
+}
+
+.pay-message {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.home-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 24px;
+    background-color: #8c52ff;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: pink;
+    color: white;
+}

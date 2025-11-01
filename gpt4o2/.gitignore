@@ -1,0 +1,39 @@
+# ============================
+# Python 프로젝트 .gitignore
+# ============================
+
+# ▶ 가상환경 (절대 올리지 말기)
+venv/
+.venv/
+env/
+
+# ▶ Python 캐시/산출물
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ▶ Jupyter Notebook 체크포인트
+.ipynb_checkpoints/
+
+# ▶ 환경변수 파일 (보안!)
+.env
+
+# ▶ 대형/모델 파일 (100MB 이상은 GitHub에 안 올라감)
+*.safetensors
+*.pt
+*.bin
+*.onnx
+*.h5
+*.ckpt
+*.weights
+
+# ▶ 학습 결과 폴더 (모델 아웃풋)
+vit_*/
+checkpoints/
+runs/
+outputs/
+
+# ▶ 운영체제 자동 생성 파일
+.DS_Store
+Thumbs.db

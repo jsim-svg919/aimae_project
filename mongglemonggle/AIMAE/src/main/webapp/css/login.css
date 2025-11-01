@@ -1,0 +1,136 @@
+body {
+    font-family: 'Pretendard-Regular', sans-serif;
+}
+
+.login-container {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 404px;
+}
+
+.login-box {
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+    display: flex;
+    justify-content: center;
+}
+
+.login-logo {
+    text-align: center;
+    font-size: 28px;
+    color: #8c52ff;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-form input {
+    width: 15.3rem;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.login-form input:focus {
+    border-color: #8c52ff;
+    outline: none;
+}
+
+.login-form button {
+    padding: 12px;
+    background-color: #8c52ff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-2 {
+    border: 1px solid #c4c4c4 !important;
+    padding: 12px;
+    background-color: white !important;
+    color: black !important;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-2:hover {
+    background-color: rgb(194, 194, 194) !important;
+    color: white !important;
+}
+
+.login-form button:hover {
+    background-color: pink;
+    color: white;
+}
+
+.login-span {
+    margin-top: 1rem;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.login-span span a {
+    text-decoration: none;
+    color: black;
+}
+
+.login-span span a:hover {
+    text-decoration: none;
+    color: #8c52ff;
+}
+
+.login-header {
+    border-bottom: 1px solid #8c52ff;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    display: flex
+;
+}
+
+.form-input {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-input-join {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+#tel1,
+#tel2,
+#tel3 {
+    width: 5.3rem;
+}
+
+.join-button {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.join-btn-c {
+    background-color: #ff6666 !important;
+}
+
+.join-btn-c:hover {
+    background-color: #ff2f2f !important;
+}

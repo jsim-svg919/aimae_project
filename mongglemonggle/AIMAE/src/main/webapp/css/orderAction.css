@@ -1,0 +1,222 @@
+body {
+    font-family: 'Pretendard-Regular', sans-serif;
+}
+
+/* 컨테이너 레이아웃 */
+.checkout-container {
+	width: 90rem;
+	margin-top: 10rem !important;
+    margin-bottom: 10rem !important;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+/* 카드 스타일 */
+.card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    flex: 1;
+}
+
+/* 섹션 타이틀 */
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* input & textarea & select */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+.input-group label {
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #555;
+}
+.input-group input,
+.input-group select,
+.input-group textarea {
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #0078ff;
+    box-shadow: 0 0 0 3px rgba(0,120,255,0.2);
+    outline: none;
+}
+
+/* 주문 아이템 */
+.order-item {
+	width: 36rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+.order-item.total {
+    font-weight: bold;
+    font-size: 16px;
+    color: #222;
+    border-top: 2px solid #ddd;
+}
+
+/* 상품명 */
+.item-name {
+    font-size: 15px;
+    color: #444;
+}
+
+/* 가격 */
+.item-price {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* 수량 버튼 */
+.item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.qty-btn {
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 6px;
+    background: #f1f1f1;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.qty-btn:hover {
+    background: #ddd;
+}
+.item-quantity input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    background: #fafafa;
+    font-size: 14px;
+}
+
+/* 버튼 */
+.btn.buy-now {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #222, #000); /* 검은색 그라데이션 */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn.buy-now:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4); /* 블랙 그림자 */
+}
+
+.product-title {
+    display: block;          /* 또는 inline-block */
+    white-space: nowrap;     /* 한 줄로 유지 */
+    overflow: hidden;        /* 넘치는 텍스트 숨김 */
+    text-overflow: ellipsis; /* ... 처리 */
+    max-width: 330px;        /* 영역 너비 조정, 필요에 따라 px/% */
+}
+
+/* --- 반응형 --- */
+@media (max-width: 1200px) {
+    .checkout-container {
+        width: 95%;
+        flex-direction: column;
+        gap: 32px;
+        margin-top: 5rem !important;
+        margin-bottom: 5rem !important;
+    }
+
+    .order-item {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .item-quantity {
+        margin-top: 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 18px;
+    }
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .item-name,
+    .item-price {
+        font-size: 14px;
+    }
+
+    .btn.buy-now {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .checkout-container {
+        margin-top: 3rem !important;
+        margin-bottom: 3rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 16px;
+    }
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    .item-name,
+    .item-price {
+        font-size: 13px;
+    }
+
+    .btn.buy-now {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .checkout-container {
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+}
+
+

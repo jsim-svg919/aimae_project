@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.aimae.mapper.photoMapper">
+
+    <!-- 이미지 등록 -->
+    <insert id="insertPhoto" parameterType="com.aimae.model.Photo">
+        INSERT INTO PHOTO (PRODUCT_ID, PHOTO_PATH)
+        VALUES (#{PRODUCT_ID}, #{PHOTO_PATH})
+    </insert>
+
+</mapper>
+
+

@@ -1,0 +1,483 @@
+body {
+    font-family: 'Pretendard-Regular', sans-serif;
+}
+
+/* index.css 또는 myPage.css에 추가 */
+.my-page-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.my-page-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.my-page-sections {
+    display: flex;
+    gap: 40px;
+}
+
+.my-page-sidebar {
+    width: 200px;
+}
+
+.my-page-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.my-page-sidebar li {
+    margin-bottom: 15px;
+}
+
+.my-page-sidebar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.my-page-content {
+    flex: 1;
+}
+
+.user-info { 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.edit-btn {
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #8c52ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.order-summary table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.order-summary th, .order-summary td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.more-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* 기본 스타일 */
+body {
+    font-family: 'Pretendard-Regular', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.my-page-content {
+    width: 100%;
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 헤더 스타일 */
+.user-header h3 {
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.user-header a {
+    font-size: 1.2rem;
+    color: #8c52ff;
+}
+
+.user-info-card {
+    padding: 1.5rem;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-icon,
+.email-icon,
+.phone-icon,
+.address-icon,
+.calendar-icon {
+    margin-left: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #8c52ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+strong {
+    font-weight: bold;
+}
+
+p {
+    margin: 0;
+}
+
+.edit-btn {
+    background-color: #8c52ff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-btn:hover {
+    background-color: pink;
+    color: white;
+}
+
+.info-item {
+    height: 4rem;
+    border-radius: 10px;
+    background-color: white;
+    width: 27rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.user-info-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.user-info {
+    margin-bottom: 1.2rem;
+    flex: 2;
+}
+
+.profile-photo {
+    width: 22rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.profile-photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #8c52ff;
+    object-fit: cover;
+}
+
+.profile-btn {
+    margin-top: 8px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    background: #8c52ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.user-points {
+    margin-left: 2rem;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.point-card {
+    width: 4rem;
+    flex: 1;
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.point-card i {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.point-card:nth-child(1) i {
+    color: #ffb300;
+}
+.point-card:nth-child(2) i {
+    color: #ff4d6d;
+}
+.point-card:nth-child(3) i {
+    color: #8c52ff;
+}
+
+.point-card p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #555;
+}
+
+.point-card span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+}
+
+.user-extra {
+    margin-top: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+    margin-right: 2rem;
+}
+
+.profile-photo i {
+    font-size: 50px;
+    color: white;
+    background: #939393; 
+    padding: 2rem;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+.user-p {
+    margin-bottom: 0.5rem;
+}
+
+.social-login {
+    margin-left: 2.5rem;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.social-login2 {
+    margin-bottom: 2rem;
+    margin-top: 1rem !important;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.social-btn {
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform .15s ease, box-shadow .15s ease;
+    padding: 0;
+    overflow: hidden;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.social-btn img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+/* 브랜드 컬러 */
+.social-btn.kakao {
+    background: #FEE500; /* 카카오 노랑 */
+}
+
+.social-btn.google {
+    background: #ffffff; /* 구글 흰색 */
+    border: 1px solid #ddd;
+}
+
+.social-btn.naver {
+    background: #03C75A; /* 네이버 초록 */
+}
+
+.sns-login {
+    margin-left: 2.5rem;
+    margin-bottom: -2rem;
+    margin-top: -1.4rem;
+}
+
+.my-page-sidebar {
+    width: 220px;
+    background: linear-gradient(78deg, #f6f3fb, #f7f3ff);
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-top: 2.3rem;
+    height: 51.5rem;
+}
+
+.my-page-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.my-page-sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.my-page-sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.my-page-sidebar ul li a:hover {
+    background: #8c52ff; /* 포인트 컬러 */
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(140, 82, 255, 0.4);
+    transform: translateX(5px); /* 살짝 이동 효과 */
+}
+
+/* 회원 수정 CSS */
+/* 전체 폼 카드 */
+#editFormSection {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    max-width: 500px;
+    margin: 2rem auto;
+    transition: all 0.3s ease;
+}
+
+/* 헤더 */
+#editFormSection .user-header h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8c52ff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+/* 라벨 */
+.edit-form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: 600;
+    color: #555;
+}
+
+/* 입력창 */
+.edit-form input {
+    width: 94%;
+    padding: 12px 14px;
+    border: 1.5px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.edit-form input:focus {
+    border-color: #8c52ff;
+    box-shadow: 0 0 6px rgba(140, 82, 255, 0.3);
+}
+
+/* 버튼 영역 */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+/* 저장 버튼 */
+.save-btn {
+    flex: 1;
+    background: #8c52ff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* 취소 버튼 */
+.cancel-btn {
+    flex: 1;
+    background: #f3f3f3;
+    color: #333;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background: #e2e2e2;
+}
+
+.save-btn:hover {
+    background-color: pink;
+    color: white;
+}
+
+.edit-form label i,
+.user-header i {
+    color: #8c52ff;
+}

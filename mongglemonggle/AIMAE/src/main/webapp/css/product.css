@@ -1,0 +1,247 @@
+.product-container {
+  max-width: 1200px; /* 혹은 90%, 원하는 만큼 조절 가능 */
+  margin: 0 auto;     /* 중앙 정렬 */
+  padding: 0 20px;     /* 양쪽 여백 */
+}
+
+/* 상품 목록 전체 컨테이너 */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+/* 링크 자체가 하나의 카드처럼 동작하도록 */
+.product-link {
+  width: calc(20% - 19.2px); /* 5개씩 정렬 */
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+/* 카드 디자인 */
+.product-item {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* 이미지 */
+.product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+/* 상품 정보 */
+.product-info {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 텍스트 스타일 */
+.product-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* 카드 호버 효과 */
+.product-link:hover .product-item {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.section-title {
+    text-align: center;
+}
+
+.sort-options {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.sort-btn {
+    padding: 8px 16px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sort-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.sort-btn.active {
+    background-color: #8c52ff;
+    color: white;
+    border-color: #8c52ff;
+}
+
+/* 헤더 전체 */
+.product-header {
+    margin-top: 5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+/* 메인 타이틀 */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+/* 서브 타이틀 */
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 0;
+}
+
+/* 타이틀 밑줄 효과 (선택사항) */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #FF6347;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+.section-title.electronics::after {
+  background-color: black;
+}
+
+.section-title.fruits::after {
+  background-color: #FF6347;
+}
+
+.section-title.vegetable::after {
+  background-color: green;
+}
+
+/* 반응형 */
+@media (max-width: 1200px) {
+  .product-link { width: calc(25% - 18px); }
+}
+@media (max-width: 900px) {
+  .product-link { width: calc(33.33% - 16px); }
+}
+@media (max-width: 600px) {
+  .product-link { width: calc(50% - 12px); }
+}
+@media (max-width: 400px) {
+  .product-link { width: 100%; }
+}
+
+@media (min-width: 1200px) {
+  .content-box-img {
+    max-width: 103rem;
+  }
+}
+
+.product-list-box {
+  width: 240px;
+  height: 340px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-list-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.product-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 0.95rem;
+  color: black;
+  margin-bottom: 12px;
+}
+
+.add-cart-btn {
+  background: #8c52ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-cart-btn:hover {
+  background: #6a35cc;
+}
+
+.product-span {
+	display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.product-tag {
+	color: #474747;
+	display: flex;
+    height: 25px;
+    width: 70px;
+    border-radius: 5px;
+    background: #e7e7e7;
+    align-items: center;
+    justify-content: space-around;
+}
+
+

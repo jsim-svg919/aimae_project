@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.aimae.mapper.productMapper">
+
+    <!-- 전체 조회 -->
+    <select id="selectAllProduct" resultType="com.aimae.model.Product">
+       <![CDATA[
+    SELECT DISTINCT p.PRODUCT_ID, p.PRODUCT_NAME, p.PRICE, p.CATEGORY, p.PRD_INFO, p.STOCK, p.PRD_DETAIL,
+           (SELECT ph2.PHOTO_PATH 
+            FROM PHOTO ph2 
+            WHERE ph2.PRODUCT_ID = p.PRODUCT_ID 
+            AND ph2.PHOTO_PATH LIKE '%main.%' 
+            AND ROWNUM = 1) as PHOTO_PATH
+    FROM PRODUCT p
+    WHERE ROWNUM <= 5
+    ORDER BY p.PRODUCT_ID DESC
+    ]]>
+   </select>
+
+    <!-- 전체 상품 조회 (제한 없음) -->
+    <select id="selectAllProducts" resultType="com.aimae.model.Product">
+        SELECT DISTINCT p.PRODUCT_ID, p.PRODUCT_NAME, p.PRICE, p.CATEGORY, p.PRD_INFO, p.STOCK, p.PRD_DETAIL,
+               (SELECT ph2.PHOTO_PATH 
+                FROM PHOTO ph2 
+                WHERE ph2.PRODUCT_ID = p.PRODUCT_ID 
+                AND ph2.PHOTO_PATH LIKE '%main.%' 
+                AND ROWNUM = 1) as PHOTO_PATH
+        FROM PRODUCT p
+        ORDER BY p.PRODUCT_ID DESC
+    </select>
+
+    <!-- 재고 낮은순 조회 -->
+    <select id="selectStockProducts" resultType="com.aimae.model.Product">
+       <![CDATA[
+    SELECT DISTINCT p.PRODUCT_ID, p.PRODUCT_NAME, p.PRICE, p.CATEGORY, p.PRD_INFO, p.STOCK, p.PRD_DETAIL,
+           (SELECT ph2.PHOTO_PATH 
+            FROM PHOTO ph2 
+            WHERE ph2.PRODUCT_ID = p.PRODUCT_ID 
+            AND ph2.PHOTO_PATH LIKE '%main.%' 
+            AND ROWNUM = 1) as PHOTO_PATH
+    FROM PRODUCT p
+    WHERE ROWNUM <= 5
+    ORDER BY p.STOCK ASC
+    ]]>
+   </select>
+   
+   <!-- 상품 ID로 조회 -->
+   <select id="selectProductById" parameterType="string" resultType="com.aimae.model.Product">
+       SELECT DISTINCT p.PRODUCT_ID, p.PRODUCT_NAME, p.PRICE, p.CATEGORY, p.PRD_INFO, p.STOCK, p.PRD_DETAIL, p.PHOTO_THUMB, 
+              (SELECT ph2.PHOTO_PATH 
+               FROM PHOTO ph2 
+               WHERE ph2.PRODUCT_ID = p.PRODUCT_ID 
+               AND ph2.PHOTO_PATH LIKE '%main.%' 
+               AND ROWNUM = 1) as PHOTO_PATH
+       FROM PRODUCT p
+       WHERE p.PRODUCT_ID = #{productId}
+   </select>
+   
+   <!-- 메인 이미지 조회 -->
+   <select id="selectMainPhoto" parameterType="string" resultType="string">
+       SELECT PHOTO_PATH
+       FROM PHOTO
+       WHERE PRODUCT_ID = #{productId}
+       AND PHOTO_PATH LIKE '%main.%'
+       AND ROWNUM = 1
+   </select>
+   
+   <!-- 상품의 모든 이미지 조회 -->
+   <select id="selectProductPhotos" parameterType="string" resultType="com.aimae.model.Photo">
+       SELECT PRODUCT_ID, PHOTO_PATH
+       FROM PHOTO
+       WHERE PRODUCT_ID = #{productId}
+       ORDER BY 
+           CASE WHEN PHOTO_PATH LIKE '%main.%' THEN 0 ELSE 1 END,
+           PHOTO_PATH
+   </select>
+   
+   <!-- product_detail 테이블에서 상품 상세 정보 조회 -->
+   <select id="selectProductDetail" parameterType="string" resultType="com.aimae.model.Product_Detail">
+       SELECT PRODUCT_ID, CATEGORY, PRODUCT_NAME, DELY_OPT, DELY_AREA, RECEIPT, AFTER_SERVICE
+       FROM PRODUCT_DETAIL
+       WHERE PRODUCT_ID = #{productId}
+   </select>
+   
+
+   
+   <!-- 야채 카테고리 상품 조회 -->
+   <select id="selectVegetableProducts" resultType="com.aimae.model.Product">
+       <![CDATA[
+       SELECT DISTINCT p.PRODUCT_ID, p.PRODUCT_NAME, p.PRICE, p.CATEGORY, p.PRD_INFO, p.STOCK, p.PRD_DETAIL,
+              (SELECT ph2.PHOTO_PATH 
+               FROM PHOTO ph2 
+               WHERE ph2.PRODUCT_ID = p.PRODUCT_ID 
+               AND ph2.PHOTO_PATH LIKE '%main.%' 
+               AND ROWNUM = 1) as PHOTO_PATH
+       FROM PRODUCT p
+       WHERE p.CATEGORY = '야채'
+       ORDER BY p.PRODUCT_ID DESC
+       ]]>
+   </select>
+   
+   <!-- 가전제품 카테고리 상품 조회 -->
+   <select id="selectElectronicProducts" resultType="com.aimae.model.Product">
+       SELECT DISTINCT p.PRODUCT_ID, p.PRODUCT_NAME, p.PRICE, p.CATEGORY, p.PRD_INFO, p.STOCK, p.PRD_DETAIL,
+              (SELECT ph2.PHOTO_PATH 
+               FROM PHOTO ph2 
+               WHERE ph2.PRODUCT_ID = p.PRODUCT_ID 
+               AND ph2.PHOTO_PATH LIKE '%main.%' 
+               AND ROWNUM = 1) as PHOTO_PATH
+       FROM PRODUCT p
+       WHERE p.CATEGORY = '가전제품'
+       ORDER BY p.PRODUCT_ID DESC
+   </select>
+   
+      <!-- 과일 카테고리 상품 조회 -->
+   <select id="selectFruitProducts" resultType="com.aimae.model.Product">
+       SELECT p.PRODUCT_ID, p.PRODUCT_NAME, p.PRICE, p.CATEGORY, p.PRD_INFO, p.STOCK, p.PRD_DETAIL,
+              (SELECT ph2.PHOTO_PATH 
+               FROM PHOTO ph2 
+               WHERE ph2.PRODUCT_ID = p.PRODUCT_ID 
+               AND ph2.PHOTO_PATH LIKE '%main.%') as PHOTO_PATH
+       FROM PRODUCT p
+       WHERE p.CATEGORY = '과일'
+       ORDER BY p.PRODUCT_ID DESC
+   </select>
+   
+   <!-- 상품 수정 -->
+   <update id="updateProduct" parameterType="com.aimae.model.Product">
+       UPDATE PRODUCT 
+       SET PRODUCT_NAME = #{PRODUCT_NAME},
+           CATEGORY = #{CATEGORY},
+           STOCK = #{STOCK},
+           PRICE = #{PRICE}
+       WHERE PRODUCT_ID = #{PRODUCT_ID}
+   </update>
+   
+   <!-- 상품 등록 - 수정됨 -->
+   <insert id="insertProduct" parameterType="com.aimae.model.Product">
+       INSERT INTO PRODUCT (PRODUCT_ID, PRODUCT_NAME, PRICE, CATEGORY, PRD_INFO, STOCK, PRD_DETAIL)
+       VALUES ('PD_' || LPAD(PRODUCT_ID_SEQ.NEXTVAL, 5, '0'), #{PRODUCT_NAME}, #{PRICE}, #{CATEGORY}, #{PRD_INFO}, #{STOCK}, #{PRD_DETAIL})
+   </insert>
+   
+   <!-- 상품 삭제 -->
+   <delete id="deleteProduct" parameterType="string">
+       DELETE FROM PRODUCT WHERE PRODUCT_ID = #{productId}
+   </delete>
+
+</mapper>

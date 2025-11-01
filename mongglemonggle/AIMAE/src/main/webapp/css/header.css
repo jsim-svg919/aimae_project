@@ -1,0 +1,102 @@
+/* Font */
+@font-face {
+    font-family: 'Pretendard-Regular';  /* 폰트 이름 */
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;  /* 기본 폰트 두께 */
+    font-style: normal;  /* 폰트 스타일 */
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .search {
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .login-btn {
+    width: auto;
+  }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem 1.25rem;  /* 10px, 20px -> rem으로 변경 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Pretendard-Regular', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.brand {
+    margin-left: 0.5625rem;  /* 25px -> rem으로 변경 */
+}
+
+.category-logo {
+    border: none;
+    background-color: white;
+    text-decoration: none;
+    color: #8c52ff;
+}
+
+.category-logo:hover {
+    border: none;
+    background-color: #8c52ff;
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+    text-decoration: none;
+    color: #8c52ff;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 0.9375rem;  /* 15px -> rem으로 변경 */
+}
+
+.nav {
+    display: flex;
+    gap: 1.25rem;  /* 20px -> rem으로 변경 */
+    align-items: center;
+}
+
+.nav-ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.login-btn {
+    color: white;
+    width: 7.5rem;  /* 120px -> rem으로 변경 */
+    border-radius: 0.3125rem;  /* 5px -> rem으로 변경 */
+    background-color: black;
+    padding: 0.5rem 1rem;  /* 8px 16px -> rem으로 변경 */
+    font-size: 1rem;  /* 16px -> rem으로 변경 */
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.brand span {
+    font-size: 1.5rem;  /* 24px -> rem으로 변경 */
+    font-weight: bold;
+}

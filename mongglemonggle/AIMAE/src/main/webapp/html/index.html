@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMAE</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" sizes="52x52" type="image/png">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+
+        <div class="brand">
+
+            <div class="dropdown">
+                <button class="category-logo">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                </button>
+
+                <div class="dropdown-content">
+                    <a href="html/fruitProducts.html">과일</a>
+                    <a href="html/vegetableProducts.html">채소</a>
+                    <a href="html/electronicProducts.html">전자제품</a>
+                </div>
+
+            </div>
+
+            <a href="index.html" class="logo">
+                <span style="margin-left: 10px;">AIMAE</span>
+            </a>
+            
+    </div>
+
+        <div class="nav">
+            <ul class="nav-ul">
+                <li><a href="html/login.html" class="link">로그인</a></li>
+                <li><a href="html/join.html" class="link">회원가입</a></li>
+                <li><a href="html/cart.html" class="link">장바구니</a></li>
+                <li><a href="#" class="link">고객센터</a></li>
+            </ul>
+            
+            <button class="login-btn" onclick="location.href='html/myPage.html'">마이페이지</button>
+        </div>
+
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <div>
+            <h1 class="animated-text" style="font-size: 36px;">당신의 고민을 대신 추천해주는 AI 쇼핑 도우미 <span class="logo2">' AIMAE '</span> 입니다.</h1>
+        </div>
+
+        <div class="content-text">
+            <p>당신의 쇼핑 고민을 해결해주는 최고의 인공지능 도우미</p>
+            <p>AI가 당신의 취향과 필요를 분석하여 최적의 상품을 추천해줍니다.</p>
+            <p>복잡한 쇼핑 과정에서 벗어나, 원하는 제품을 찾을 수 있습니다.</p>
+        </div>
+
+        <!-- Search bar -->
+
+        <div class="search">
+            <form class="search-form">
+                <a href="#" class="image-icon" id="image-icon"><i class="fa-solid fa-image"></i></a>
+                <input type="text" placeholder="어떤 제품을 찾고 계신가요?" id="search-input" />
+                <a href="#" class="search-icon" id="search-icon"><i class="fas fa-search"></i></a>
+                <input type="file" id="file-input" style="display:none;">
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Content2 -->
+    <!-- 신상품 -->
+<div class="content-product">
+    <h2 class="section-header">🛍️ 신상품</h2>
+    <div class="product-slider">
+
+        <div class="product-card">
+            <img src="images/favicon.ico" alt="화이트닝 치약" class="product-img">
+            <div class="product-info">
+                <h3 class="product-name">화이트닝 치약</h3>
+                <p class="product-price">₩5,000</p>
+                <button class="add-cart-btn"><i class="fas fa-shopping-cart"></i> 장바구니</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/favicon.ico" alt="프리미엄 사과" class="product-img">
+            <div class="product-info">
+                <h3 class="product-name">프리미엄 사과</h3>
+                <p class="product-price">₩12,000</p>
+                <button class="add-cart-btn"><i class="fas fa-shopping-cart"></i> 장바구니</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/favicon.ico" alt="유기농 채소 세트" class="product-img">
+            <div class="product-info">
+                <h3 class="product-name">유기농 채소 세트</h3>
+                <p class="product-price">₩8,500</p>
+                <button class="add-cart-btn"><i class="fas fa-shopping-cart"></i> 장바구니</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/favicon.ico" alt="무선 이어폰" class="product-img">
+            <div class="product-info">
+                <h3 class="product-name">무선 이어폰</h3>
+                <p class="product-price">₩89,000</p>
+                <button class="add-cart-btn"><i class="fas fa-shopping-cart"></i> 장바구니</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/favicon.ico" alt="고급 커피 원두" class="product-img">
+            <div class="product-info">
+                <h3 class="product-name">고급 커피 원두</h3>
+                <p class="product-price">₩15,000</p>
+                <button class="add-cart-btn"><i class="fas fa-shopping-cart"></i> 장바구니</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- 최근 구매순 -->
+<div class="content-product">
+    <h2 class="section-header">🔥 최근 구매순</h2>
+    <div class="product-slider">
+
+        <div class="product-card">
+            <img src="images/favicon.ico" alt="천연샴푸" class="product-img">
+            <div class="product-info">
+                <h3 class="product-name">천연샴푸</h3>
+                <p class="product-price">₩9,900</p>
+                <button class="add-cart-btn"><i class="fas fa-shopping-cart"></i> 장바구니</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/favicon.ico" alt="프리미엄 키보드" class="product-img">
+            <div class="product-info">
+                <h3 class="product-name">프리미엄 키보드</h3>
+                <p class="product-price">₩59,000</p>
+                <button class="add-cart-btn"><i class="fas fa-shopping-cart"></i> 장바구니</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/favicon.ico" alt="블루베리" class="product-img">
+            <div class="product-info">
+                <h3 class="product-name">블루베리</h3>
+                <p class="product-price">₩6,500</p>
+                <button class="add-cart-btn"><i class="fas fa-shopping-cart"></i> 장바구니</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/favicon.ico" alt="에코백" class="product-img">
+            <div class="product-info">
+                <h3 class="product-name">에코백</h3>
+                <p class="product-price">₩7,000</p>
+                <button class="add-cart-btn"><i class="fas fa-shopping-cart"></i> 장바구니</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/favicon.ico" alt="비타민C" class="product-img">
+            <div class="product-info">
+                <h3 class="product-name">비타민C</h3>
+                <p class="product-price">₩11,000</p>
+                <button class="add-cart-btn"><i class="fas fa-shopping-cart"></i> 장바구니</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <div class="content-box-img">
+        <img class="content-img" src="images/freedelivery.png">
+        <img class="content-img" src="images/freedelivery2.png">
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4 style="margin-bottom: 22px;">회사 정보</h4>
+                <p class="footer-p">주소 : 서울특별시 강남구</p>
+                <p class="footer-p">전화 : 010-1234-5678</p>
+                <p class="footer-p">이메일 : support@aimae.com</p>
+            </div>
+        
+            <div class="footer-section">
+                <h4>고객센터</h4>
+                <ul>
+                    <li class="footer-tag"><a href="#">FAQ</a></li>
+                    <li class="footer-tag"><a href="#">반품/교환</a></li>
+                    <li class="footer-tag"><a href="#">배송정보</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>소셜 미디어</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/chan2hee1" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div>
+                    <img src="images/favicon.ico" alt="" style="width: 5rem;">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 AIMAE</p>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/index.js"></script>
+
+    <!-- 슬라이드 -->
+    <script>
+        $(document).ready(function(){
+            $('.product-slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,       // 1씩 스크롤
+                arrows: true,
+                infinite: false,
+                prevArrow: '<button type="button" class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
+                nextArrow: '<button type="button" class="slick-next"><i class="fa-solid fa-angle-right"></i></button>',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: { slidesToShow: 2 }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: { slidesToShow: 1 }
+                    }
+                ]
+            });
+        });
+
+    </script>
+
+    <!-- 드롭다운 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const dropdown = document.querySelector('.dropdown');
+        const btn = dropdown.querySelector('.category-logo');
+
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                dropdown.classList.toggle('show');
+            });
+
+            window.addEventListener('click', (e) => {
+                if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('show');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
